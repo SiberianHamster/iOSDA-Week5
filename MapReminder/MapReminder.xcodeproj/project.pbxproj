@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEA9F5791B96046B00724D98 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA9F5781B96046B00724D98 /* Stack.m */; };
 		AEC342811B951E7100D5638E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC342801B951E7100D5638E /* main.m */; };
 		AEC342841B951E7100D5638E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC342831B951E7100D5638E /* AppDelegate.m */; };
 		AEC342871B951E7100D5638E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC342861B951E7100D5638E /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AEA9F5771B96046B00724D98 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		AEA9F5781B96046B00724D98 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		AEC3427B1B951E7100D5638E /* MapReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC3427F1B951E7100D5638E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEC342801B951E7100D5638E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				AEC342831B951E7100D5638E /* AppDelegate.m */,
 				AEC342851B951E7100D5638E /* ViewController.h */,
 				AEC342861B951E7100D5638E /* ViewController.m */,
+				AEA9F5771B96046B00724D98 /* Stack.h */,
+				AEA9F5781B96046B00724D98 /* Stack.m */,
 				AEC342881B951E7100D5638E /* Main.storyboard */,
 				AEC3428B1B951E7100D5638E /* Images.xcassets */,
 				AEC3428D1B951E7100D5638E /* LaunchScreen.xib */,
@@ -228,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA9F5791B96046B00724D98 /* Stack.m in Sources */,
 				AEC342871B951E7100D5638E /* ViewController.m in Sources */,
 				AEC342841B951E7100D5638E /* AppDelegate.m in Sources */,
 				AEC342811B951E7100D5638E /* main.m in Sources */,
@@ -427,6 +433,7 @@
 				AEC342A01B951E7100D5638E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEC342A11B951E7100D5638E /* Build configuration list for PBXNativeTarget "MapReminderTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +442,7 @@
 				AEC342A31B951E7100D5638E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>37C7BDFB-335C-4EE1-9DD0-11971B6B03B6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MapReminder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D6E53AEFAC6395DBF15C596F49A72D22B994CC5A</key>
+		<string>https://github.com/SiberianHamster/iOSDA-Week5.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MapReminder/MapReminder.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D6E53AEFAC6395DBF15C596F49A72D22B994CC5A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/SiberianHamster/iOSDA-Week5.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D6E53AEFAC6395DBF15C596F49A72D22B994CC5A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D6E53AEFAC6395DBF15C596F49A72D22B994CC5A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOSDA-Week5</string>
+		</dict>
+	</array>
+</dict>
+</plist>
