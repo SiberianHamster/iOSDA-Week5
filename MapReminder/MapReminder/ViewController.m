@@ -42,7 +42,7 @@
   
   
   self.longPressDetector = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressGestures:)];
-  self.longPressDetector.minimumPressDuration = 2.0f;
+  self.longPressDetector.minimumPressDuration = 0.8f;
   self.longPressDetector.allowableMovement = 10.0f;
   [self.view addGestureRecognizer:self.longPressDetector];
 
