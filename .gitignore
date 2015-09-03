@@ -28,7 +28,8 @@ xcuserdata
 *.ipa
 
 ## MapReminder
-*keys.swift
+*keys.m
+*keys.h
 
 # CocoaPods
 #
