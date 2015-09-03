@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nwr-rU-bfz">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -70,12 +70,51 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="oPk-bp-zK5"/>
                     <connections>
                         <outlet property="mapView" destination="4fg-ui-31e" id="Lqk-KS-Drx"/>
+                        <segue destination="OvJ-9R-keX" kind="show" identifier="ReminderDetailViewController" id="DSs-rp-P3X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1185" y="234"/>
+        </scene>
+        <!--Reminder Detail View Controller-->
+        <scene sceneID="f6H-mv-i3u">
+            <objects>
+                <viewController id="OvJ-9R-keX" customClass="ReminderDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hQL-9W-i31"/>
+                        <viewControllerLayoutGuide type="bottom" id="V0T-V3-pE4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kYh-Kf-TRH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WgP-gQ-HOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1961" y="234"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fVb-qo-Hhs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nwr-rU-bfz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5up-6J-Oau">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0zf-Qk-gLb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qoJ-tQ-agh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="234"/>
         </scene>
     </scenes>
 </document>

@@ -13,7 +13,7 @@
 
 
 
-@interface ViewController () <CLLocationManagerDelegate>
+@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)disneylandButton:(UIButton *)sender;
@@ -21,6 +21,8 @@
 - (IBAction)disneyWorldButton:(UIButton *)sender;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic,strong) UILongPressGestureRecognizer *longPressDetector;
+@property (nonatomic,strong) UIView *rightCalloutAccessoryView;
+
 
 
 @end
@@ -30,6 +32,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  self.mapView.delegate = self;
   self.mapView.showsUserLocation = true;
   
   NSLog(@"%d",[CLLocationManager authorizationStatus]);
@@ -54,6 +57,7 @@
 }
 
 
+
 -(void)handleLongPressGestures:(UILongPressGestureRecognizer *)sender
 {
   if ([sender isEqual:self.longPressDetector]){
@@ -64,7 +68,7 @@
       NSLog(@"X: %f, Y: %f",coord.latitude, coord.longitude);
       MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
       annotation.coordinate = coord;
-      annotation.title = @"Selected Location";
+      annotation.title = @"Target Location";
       [self.mapView addAnnotation:annotation];
     }
   }
@@ -101,6 +105,39 @@
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
   CLLocation *location = locations.lastObject;
   NSLog(@"lat: %f, long: %f, speed: %f", location.coordinate.latitude, location.coordinate.longitude, location.speed);
+}
+
+#pragma mark - MKMapview Delegate
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+  
+  if ([annotation isKindOfClass:[MKUserLocation class]]){
+    return nil;
+  };
+  MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"AnnotationView"];
+  pinView.annotation = annotation;
+  if(!pinView){
+    pinView = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"AnnotationView"];
+  }
+  pinView.animatesDrop = true;
+  pinView.pinColor = MKPinAnnotationColorPurple;
+  pinView.canShowCallout = true;
+  UIButton *rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+  [rightCalloutAccessoryView addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+  pinView.rightCalloutAccessoryView = rightCalloutAccessoryView;
+  return pinView;
+}
+
+-(void)buttonPressed{
+  [self performSegueWithIdentifier:@"ReminderDetailViewController" sender:nil];
+}
+
+
+#pragma mark - prepareSegue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//  if ([[segue identifier] isEqualToString:@"ReminderDetailViewController"]){
+//    
+//    NSIndexPath *indexPath =
+//  }
 }
 
 @end
