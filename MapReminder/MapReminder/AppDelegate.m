@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "keys.h"
+#import <Parse/Parse.h>
+#import "locationItem.h"
 
 @interface AppDelegate ()
 
@@ -14,8 +17,11 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Parse enableLocalDatastore];
+    [locationItem registerSubclass];
+    [Parse setApplicationId:kApplilcationID clientKey:kClientKey];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
   // Override point for customization after application launch.
   return YES;
 }
